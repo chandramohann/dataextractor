@@ -1,9 +1,0 @@
-Manifest-Version: 1.0
-Bundle-ManifestVersion: 2
-Bundle-Name: Mongodb
-Bundle-SymbolicName: org.eclipse.birt.report.engine.dataextraction.mongodb;singleton:=true
-Bundle-Version: 1.0.0.qualifier
-Bundle-RequiredExecutionEnvironment: JavaSE-1.6
-Require-Bundle: org.eclipse.birt.report.engine;bundle-version="4.2.2",
- org.eclipse.birt.report.engine.dataextraction;bundle-version="4.2.2",
- org.mongodb.mongo-java-driver;bundle-version="2.10.1"
