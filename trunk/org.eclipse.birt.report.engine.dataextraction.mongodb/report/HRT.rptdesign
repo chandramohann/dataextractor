@@ -4,18 +4,6 @@
     <list-property name="propertyBindings">
         <structure>
             <property name="name">queryText</property>
-            <property name="id">9</property>
-        </structure>
-        <structure>
-            <property name="name">queryTimeOut</property>
-            <property name="id">9</property>
-        </structure>
-        <structure>
-            <property name="name">rowFetchSize</property>
-            <property name="id">9</property>
-        </structure>
-        <structure>
-            <property name="name">queryText</property>
             <property name="id">31</property>
         </structure>
         <structure>
@@ -55,6 +43,7 @@
             <list-property name="columnHints">
                 <structure>
                     <property name="columnName">CUSTOMERNUMBER</property>
+                    <property name="alias">PK</property>
                     <property name="analysis">measure</property>
                     <text-property name="displayName">CUSTOMERNUMBER</text-property>
                     <text-property name="heading">CUSTOMERNUMBER</text-property>
@@ -137,7 +126,7 @@
                 <list-property name="resultSet">
                     <structure>
                         <property name="position">1</property>
-                        <property name="name">CUSTOMERNUMBER</property>
+                        <property name="name">PK</property>
                         <property name="dataType">integer</property>
                     </structure>
                     <structure>
@@ -723,7 +712,7 @@ from CLASSICMODELS.CUSTOMERS where CLASSICMODELS.CUSTOMERS.CUSTOMERNUMBER = 124]
                 </structure>
             </list-property>
             <xml-property name="queryText"><![CDATA[select *
-from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></xml-property>
+from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124]]></xml-property>
             <xml-property name="designerValues"><![CDATA[<?xml version="1.0" encoding="UTF-8"?>
 <model:DesignValues xmlns:design="http://www.eclipse.org/datatools/connectivity/oda/design" xmlns:model="http://www.eclipse.org/birt/report/model/adapter/odaModel">
   <Version>2.0</Version>
@@ -929,20 +918,7 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
         </simple-master-page>
     </page-setup>
     <body>
-        <data name="custno" id="80">
-            <property name="dataSet">Customer</property>
-            <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">CUSTOMERNUMBER</property>
-                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-            </list-property>
-            <property name="resultSetColumn">CUSTOMERNUMBER</property>
-        </data>
-        <data name="custname" id="21">
-            <text-property name="displayName">Customerinfo</text-property>
+        <data id="238">
             <property name="dataSet">Customer</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -954,8 +930,43 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
             </list-property>
             <property name="resultSetColumn">CUSTOMERNAME</property>
         </data>
-        <data id="23">
-            <text-property name="displayName">Customerinfo</text-property>
+        <data id="239">
+            <property name="dataSet">Customer</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CONTACTLASTNAME</property>
+                    <text-property name="displayName">CONTACTLASTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CONTACTLASTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">CONTACTLASTNAME</property>
+        </data>
+        <data id="240">
+            <property name="dataSet">Customer</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CONTACTFIRSTNAME</property>
+                    <text-property name="displayName">CONTACTFIRSTNAME</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CONTACTFIRSTNAME"]</expression>
+                    <property name="dataType">string</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">CONTACTFIRSTNAME</property>
+        </data>
+        <data id="241">
+            <property name="dataSet">Customer</property>
+            <list-property name="boundDataColumns">
+                <structure>
+                    <property name="name">CUSTOMERNUMBER</property>
+                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
+                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
+                    <property name="dataType">integer</property>
+                </structure>
+            </list-property>
+            <property name="resultSetColumn">CUSTOMERNUMBER</property>
+        </data>
+        <data id="242">
             <property name="dataSet">Customer</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -967,8 +978,7 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
             </list-property>
             <property name="resultSetColumn">PHONE</property>
         </data>
-        <data id="24">
-            <text-property name="displayName">Customerinfo</text-property>
+        <data id="243">
             <property name="dataSet">Customer</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -980,8 +990,7 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
             </list-property>
             <property name="resultSetColumn">ADDRESSLINE1</property>
         </data>
-        <data id="25">
-            <text-property name="displayName">Customerinfo</text-property>
+        <data id="244">
             <property name="dataSet">Customer</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -993,8 +1002,7 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
             </list-property>
             <property name="resultSetColumn">ADDRESSLINE2</property>
         </data>
-        <data id="26">
-            <text-property name="displayName">Customerinfo</text-property>
+        <data id="245">
             <property name="dataSet">Customer</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -1006,8 +1014,7 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
             </list-property>
             <property name="resultSetColumn">CITY</property>
         </data>
-        <data id="27">
-            <text-property name="displayName">Customerinfo</text-property>
+        <data id="246">
             <property name="dataSet">Customer</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -1019,8 +1026,7 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
             </list-property>
             <property name="resultSetColumn">STATE</property>
         </data>
-        <data id="28">
-            <text-property name="displayName">Customerinfo</text-property>
+        <data id="247">
             <property name="dataSet">Customer</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -1032,104 +1038,27 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
             </list-property>
             <property name="resultSetColumn">POSTALCODE</property>
         </data>
-        <data id="29">
-            <text-property name="displayName">Customerinfo</text-property>
+        <data id="248">
             <property name="dataSet">Customer</property>
             <list-property name="boundDataColumns">
-                <structure>
-                    <property name="name">CUSTOMERNUMBER</property>
-                    <text-property name="displayName">CUSTOMERNUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNUMBER"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">CUSTOMERNAME</property>
-                    <text-property name="displayName">CUSTOMERNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CUSTOMERNAME"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">CONTACTLASTNAME</property>
-                    <text-property name="displayName">CONTACTLASTNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CONTACTLASTNAME"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">CONTACTFIRSTNAME</property>
-                    <text-property name="displayName">CONTACTFIRSTNAME</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CONTACTFIRSTNAME"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">PHONE</property>
-                    <text-property name="displayName">PHONE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["PHONE"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">ADDRESSLINE1</property>
-                    <text-property name="displayName">ADDRESSLINE1</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ADDRESSLINE1"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">ADDRESSLINE2</property>
-                    <text-property name="displayName">ADDRESSLINE2</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["ADDRESSLINE2"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">CITY</property>
-                    <text-property name="displayName">CITY</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CITY"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">STATE</property>
-                    <text-property name="displayName">STATE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["STATE"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
-                <structure>
-                    <property name="name">POSTALCODE</property>
-                    <text-property name="displayName">POSTALCODE</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["POSTALCODE"]</expression>
-                    <property name="dataType">string</property>
-                </structure>
                 <structure>
                     <property name="name">COUNTRY</property>
                     <text-property name="displayName">COUNTRY</text-property>
                     <expression name="expression" type="javascript">dataSetRow["COUNTRY"]</expression>
                     <property name="dataType">string</property>
                 </structure>
-                <structure>
-                    <property name="name">SALESREPEMPLOYEENUMBER</property>
-                    <text-property name="displayName">SALESREPEMPLOYEENUMBER</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["SALESREPEMPLOYEENUMBER"]</expression>
-                    <property name="dataType">integer</property>
-                </structure>
-                <structure>
-                    <property name="name">CREDITLIMIT</property>
-                    <text-property name="displayName">CREDITLIMIT</text-property>
-                    <expression name="expression" type="javascript">dataSetRow["CREDITLIMIT"]</expression>
-                    <property name="dataType">float</property>
-                </structure>
             </list-property>
             <property name="resultSetColumn">COUNTRY</property>
         </data>
-        <table name="orders" id="127">
-            <property name="borderBottomColor">#808080</property>
+        <table name="Orders" id="249">
             <property name="borderBottomStyle">solid</property>
-            <property name="borderBottomWidth">thin</property>
-            <property name="borderLeftColor">#808080</property>
+            <property name="borderBottomWidth">medium</property>
             <property name="borderLeftStyle">solid</property>
-            <property name="borderLeftWidth">thin</property>
-            <property name="borderRightColor">#808080</property>
+            <property name="borderLeftWidth">medium</property>
             <property name="borderRightStyle">solid</property>
-            <property name="borderRightWidth">thin</property>
-            <property name="borderTopColor">#808080</property>
+            <property name="borderRightWidth">medium</property>
             <property name="borderTopStyle">solid</property>
-            <property name="borderTopWidth">thin</property>
+            <property name="borderTopWidth">medium</property>
             <property name="dataSet">Orders</property>
             <list-property name="boundDataColumns">
                 <structure>
@@ -1175,94 +1104,93 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
                     <property name="dataType">integer</property>
                 </structure>
             </list-property>
-            <column id="166"/>
-            <column id="167"/>
-            <column id="168"/>
-            <column id="169"/>
-            <column id="170"/>
-            <column id="171"/>
-            <column id="172"/>
+            <column id="288"/>
+            <column id="289"/>
+            <column id="290"/>
+            <column id="291"/>
+            <column id="292"/>
+            <column id="293"/>
+            <column id="294"/>
             <header>
-                <row id="128">
-                    <property name="borderBottomStyle">solid</property>
-                    <property name="borderBottomWidth">medium</property>
-                    <property name="borderLeftStyle">solid</property>
-                    <property name="borderLeftWidth">medium</property>
-                    <property name="borderRightStyle">solid</property>
-                    <property name="borderRightWidth">medium</property>
-                    <property name="borderTopStyle">solid</property>
-                    <property name="borderTopWidth">medium</property>
-                    <cell id="129">
-                        <label id="130">
+                <row id="250">
+                    <cell id="251">
+                        <label id="252">
+                            <property name="fontWeight">bold</property>
                             <text-property name="text">ORDERNUMBER</text-property>
                         </label>
                     </cell>
-                    <cell id="131">
-                        <label id="132">
+                    <cell id="253">
+                        <label id="254">
+                            <property name="fontWeight">bold</property>
                             <text-property name="text">ORDERDATE</text-property>
                         </label>
                     </cell>
-                    <cell id="133">
-                        <label id="134">
+                    <cell id="255">
+                        <label id="256">
+                            <property name="fontWeight">bold</property>
                             <text-property name="text">REQUIREDDATE</text-property>
                         </label>
                     </cell>
-                    <cell id="135">
-                        <label id="136">
+                    <cell id="257">
+                        <label id="258">
+                            <property name="fontWeight">bold</property>
                             <text-property name="text">SHIPPEDDATE</text-property>
                         </label>
                     </cell>
-                    <cell id="137">
-                        <label id="138">
+                    <cell id="259">
+                        <label id="260">
+                            <property name="fontWeight">bold</property>
                             <text-property name="text">STATUS</text-property>
                         </label>
                     </cell>
-                    <cell id="139">
-                        <label id="140">
+                    <cell id="261">
+                        <label id="262">
+                            <property name="fontWeight">bold</property>
                             <text-property name="text">COMMENTS</text-property>
                         </label>
                     </cell>
-                    <cell id="141">
-                        <label id="142">
+                    <cell id="263">
+                        <label id="264">
+                            <property name="fontWeight">bold</property>
                             <text-property name="text">CUSTOMERNUMBER</text-property>
                         </label>
                     </cell>
                 </row>
             </header>
             <detail>
-                <row id="143">
-                    <cell id="144">
-                        <data id="145">
+                <row id="265">
+                    <cell id="266">
+                        <data id="267">
                             <property name="resultSetColumn">ORDERNUMBER</property>
                         </data>
                     </cell>
-                    <cell id="146">
-                        <data id="147">
+                    <cell id="268">
+                        <data id="269">
                             <property name="resultSetColumn">ORDERDATE</property>
                         </data>
                     </cell>
-                    <cell id="148">
-                        <data id="149">
+                    <cell id="270">
+                        <data id="271">
                             <property name="resultSetColumn">REQUIREDDATE</property>
                         </data>
                     </cell>
-                    <cell id="150">
-                        <data id="151">
+                    <cell id="272">
+                        <data id="273">
                             <property name="resultSetColumn">SHIPPEDDATE</property>
                         </data>
                     </cell>
-                    <cell id="152">
-                        <data id="153">
+                    <cell id="274">
+                        <data id="275">
                             <property name="resultSetColumn">STATUS</property>
                         </data>
                     </cell>
-                    <cell id="154">
-                        <data id="155">
+                    <cell id="276">
+                        <data id="277">
                             <property name="resultSetColumn">COMMENTS</property>
                         </data>
                     </cell>
-                    <cell id="156">
-                        <data id="157">
+                    <cell id="278">
+                        <data id="279">
                             <property name="resultSetColumn">CUSTOMERNUMBER</property>
                         </data>
                     </cell>
@@ -1277,6 +1205,11 @@ from CLASSICMODELS.ORDERS where CLASSICMODELS.ORDERS.CUSTOMERNUMBER = 124 ]]></x
         </variable-element>
         <variable-element name="mongoDBPort">
             <expression name="value" type="javascript">"27017"</expression>
+            <property name="type">report</property>
+        </variable-element>
+        <variable-element name="mongoDB">
+            <expression name="value" type="javascript">"orders"&#13;
+"birt"</expression>
             <property name="type">report</property>
         </variable-element>
     </property>
