@@ -1,20 +1,18 @@
-/*******************************************************************************
- * Copyright (c) 2013 Actuate Corporation.
- * All rights reserved. This program and the accompanying materials
- * are made available under the terms of the Eclipse Public License v1.0
- * which accompanies this distribution, and is available at
- * http://www.eclipse.org/legal/epl-v10.html
- *
- * Contributors:
- *  Actuate Corporation  - initial API and implementation
- *******************************************************************************/
+/*
+ * Copyright (c) 2013 Megha Nidhi Dahal. All rights reserved. 
+ * This program and the accompanying materials are made available under the terms of the 
+ * Eclipse Public License v1.0 which accompanies this distribution, and is available at 
+ * http://www.eclipse.org/legal/epl-v10.html 
+ * 
+ * Contributors: Chandramohan N
+ */
 
 package org.eclipse.birt.report.engine.dataextraction.mongodb;
 
 import org.eclipse.birt.report.engine.dataextraction.ICommonDataExtractionOption;
 
 /**
- * Extends Data Extraction options for CSV format
+ * Extends Data Extraction options for json format
  * 
  */
 public interface IMongoDataExtractionOption extends ICommonDataExtractionOption {
